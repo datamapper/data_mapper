@@ -14,7 +14,7 @@ PACKAGE_FILES = [
 
 PROJECT = "data_mapper"
 
-DEPENDENCIES = %w(data_objects do_mysql do_postgres do_sqlite3 dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations)
+DEPENDENCIES = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
 
 
 gem_spec = Gem::Specification.new do |s|
