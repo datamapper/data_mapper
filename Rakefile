@@ -5,7 +5,7 @@ require 'rake'
 require 'rake/clean'
 require 'rake/gempackagetask'
 
-PACKAGE_VERSION = '0.9.1'
+PACKAGE_VERSION = '0.9.2'
 
 PACKAGE_FILES = [
   'README',
