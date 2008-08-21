@@ -2,55 +2,69 @@
 require 'pathname'
 require 'rubygems'
 require 'rake'
-require 'rake/clean'
-require 'rake/gempackagetask'
 
-PACKAGE_VERSION = '0.9.2'
+gems = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
 
-PACKAGE_FILES = [
-  'README',
-  'lib/**/*.rb',
-].collect { |pattern| Pathname.glob(pattern) }.flatten.reject { |path| path.to_s =~ /(\/db|Makefile|\.bundle|\.log|\.o)\z/ }
+AUTHOR = "Sam Smoot"
+EMAIL  = "ssmoot@gmail.com"
+GEM_NAME = "data_mapper"
+GEM_VERSION = "0.9.3"
+GEM_DEPENDENCIES = [["dm-core", GEM_VERSION], *gems.collect { |g| [g, GEM_VERSION] }]
+GEM_CLEAN = ['**/*.{gem,DS_Store}', '*.db', "doc/rdoc", ".config", "**/coverage", "cache", "lib/merb-more.rb"]
+GEM_EXTRAS = { :has_rdoc => false }
 
-PROJECT = "data_mapper"
+PROJECT_NAME = "datamapper"
+PROJECT_URL  = "http://datamapper.org"
+PROJECT_DESCRIPTION = "Faster, Better, Simpler."
+PROJECT_SUMMARY = "An Object/Relational Mapper for Ruby"
 
-DEPENDENCIES = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
-
-
-gem_spec = Gem::Specification.new do |s|
-  s.platform = Gem::Platform::RUBY
-  s.name = PROJECT
-  s.summary = "An Object/Relational Mapper for Ruby"
-  s.description = "Faster, Better, Simpler."
-  s.version = PACKAGE_VERSION
-
-  s.authors = "Sam Smoot"
-  s.email = "ssmoot@gmail.com"
-  s.rubyforge_project = PROJECT
-  s.homepage = "http://datamapper.org"
-
-  s.files = PACKAGE_FILES.map { |f| f.to_s }
-
-  s.require_path = "lib"
-  s.requirements << "none"
-  
-  DEPENDENCIES.each do |lib|
-    s.add_dependency lib, ">= #{PACKAGE_VERSION}"
-  end
-
-  s.has_rdoc = false
-end
-
-Rake::GemPackageTask.new(gem_spec) do |p|
-  p.gem_spec = gem_spec
-  p.need_tar = true
-  p.need_zip = true
-end
 
 WINDOWS = (RUBY_PLATFORM =~ /win32|mingw|bccwin|cygwin/) rescue nil
 SUDO    = WINDOWS ? '' : ('sudo' unless ENV['SUDOLESS'])
 
-desc "Install #{PROJECT}"
+desc "Install #{GEM_NAME}"
 task :install => :package do
-  sh %{#{SUDO} gem install --local pkg/#{PROJECT}-#{PACKAGE_VERSION}}
+  sh %{#{SUDO} gem install --local pkg/#{GEM_NAME}-#{GEM_VERSION}}
+end
+
+## HOE TASKS
+
+require 'hoe'
+
+@config_file = "~/.rubyforge/user-config.yml"
+@config = nil
+RUBYFORGE_USERNAME = "unknown"
+def rubyforge_username
+  unless @config
+    begin
+      @config = YAML.load(File.read(File.expand_path(@config_file)))
+    rescue
+      puts <<-EOS
+ERROR: No rubyforge config file found: #{@config_file}
+Run 'rubyforge setup' to prepare your env for access to Rubyforge
+ - See http://newgem.rubyforge.org/rubyforge.html for more details
+      EOS
+      exit
+    end
+  end
+  RUBYFORGE_USERNAME.replace @config["username"]
+end
+
+hoe = Hoe.new(GEM_NAME, GEM_VERSION) do |p|
+
+  p.developer(AUTHOR, EMAIL)
+
+  p.description = PROJECT_DESCRIPTION
+  p.summary = PROJECT_SUMMARY
+  p.url = PROJECT_URL
+
+  p.rubyforge_name = PROJECT_NAME if PROJECT_NAME
+
+  p.clean_globs |= GEM_CLEAN
+  p.spec_extras = GEM_EXTRAS if GEM_EXTRAS
+
+  GEM_DEPENDENCIES.each do |dep|
+    p.extra_deps << dep
+  end
+
 end
