@@ -5,18 +5,18 @@ require 'rake'
 
 gems = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
 
-AUTHOR = "Sam Smoot"
-EMAIL  = "ssmoot@gmail.com"
-GEM_NAME = "data_mapper"
-GEM_VERSION = "0.9.7"
-GEM_DEPENDENCIES = [["dm-core", GEM_VERSION], *gems.collect { |g| [g, GEM_VERSION] }]
-GEM_CLEAN = ['**/*.{gem,DS_Store}', '*.db', "doc/rdoc", ".config", "**/coverage", "cache", "lib/merb-more.rb"]
+AUTHOR = 'Sam Smoot'
+EMAIL  = 'ssmoot@gmail.com'
+GEM_NAME = 'data_mapper'
+GEM_VERSION = '0.9.8'
+GEM_DEPENDENCIES = [['dm-core', GEM_VERSION], *gems.collect { |g| [g, GEM_VERSION] }]
+GEM_CLEAN = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
 GEM_EXTRAS = { :has_rdoc => false }
 
-PROJECT_NAME = "datamapper"
-PROJECT_URL  = "http://datamapper.org"
-PROJECT_DESCRIPTION = "Faster, Better, Simpler."
-PROJECT_SUMMARY = "An Object/Relational Mapper for Ruby"
+PROJECT_NAME = 'datamapper'
+PROJECT_URL  = 'http://datamapper.org'
+PROJECT_DESCRIPTION = 'Faster, Better, Simpler.'
+PROJECT_SUMMARY = 'An Object/Relational Mapper for Ruby'
 
 
 WINDOWS = (RUBY_PLATFORM =~ /win32|mingw|bccwin|cygwin/) rescue nil
@@ -31,9 +31,9 @@ end
 
 require 'hoe'
 
-@config_file = "~/.rubyforge/user-config.yml"
+@config_file = '~/.rubyforge/user-config.yml'
 @config = nil
-RUBYFORGE_USERNAME = "unknown"
+RUBYFORGE_USERNAME = 'unknown'
 def rubyforge_username
   unless @config
     begin
@@ -47,7 +47,7 @@ Run 'rubyforge setup' to prepare your env for access to Rubyforge
       exit
     end
   end
-  RUBYFORGE_USERNAME.replace @config["username"]
+  RUBYFORGE_USERNAME.replace @config['username']
 end
 
 hoe = Hoe.new(GEM_NAME, GEM_VERSION) do |p|
