@@ -8,7 +8,7 @@ gems = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-val
 AUTHOR = 'Dan Kubb'
 EMAIL  = 'dan.kubb@gmail.com'
 GEM_NAME = 'data_mapper'
-GEM_VERSION = '0.9.10'
+GEM_VERSION = '0.9.11'
 GEM_DEPENDENCIES = [['dm-core', GEM_VERSION], *gems.collect { |g| [g, GEM_VERSION] }]
 GEM_CLEAN = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
 GEM_EXTRAS = { :has_rdoc => false }
