@@ -1,8 +1,8 @@
 require 'rubygems'
 
-DEPENDENCIES = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
+DEPENDENCIES = %w[ dm-core dm-aggregates dm-constraints dm-migrations dm-serializer dm-timestamps dm-validations dm-types ]
 
 DEPENDENCIES.each do |lib|
-  gem lib, '0.9.11'
+  gem lib, '0.10.0'
   require lib
 end

@@ -1,3 +1,10 @@
+=== 0.10.0 / 2009-10-08
+
+* 2 major enhancements:
+
+  * Updated gem dependencies to 0.10.0
+  * Updated gems to include in meta-gem
+
 === 0.9.11 / 2009-03-29
 
 * 1 minor enhancement:

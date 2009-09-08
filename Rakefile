@@ -3,12 +3,12 @@ require 'pathname'
 require 'rubygems'
 require 'rake'
 
-gems = %w(dm-core dm-aggregates dm-migrations dm-serializer dm-timestamps dm-validations dm-cli dm-is-tree dm-observer dm-types)
+gems = %w[ dm-core dm-aggregates dm-constraints dm-migrations dm-serializer dm-timestamps dm-validations dm-types ]
 
 AUTHOR = 'Dan Kubb'
 EMAIL  = 'dan.kubb@gmail.com'
 GEM_NAME = 'data_mapper'
-GEM_VERSION = '0.9.11'
+GEM_VERSION = '0.10.0'
 GEM_DEPENDENCIES = [['dm-core', GEM_VERSION], *gems.collect { |g| [g, GEM_VERSION] }]
 GEM_CLEAN = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
 GEM_EXTRAS = { :has_rdoc => false }
