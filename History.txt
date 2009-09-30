@@ -1,4 +1,10 @@
-=== 0.10.0 / 2009-10-08
+=== 0.10.1 / 2009-09-30
+
+* 1 minor enhancement:
+
+  * Updated gem dependencies to 0.10.1
+
+=== 0.10.0 / 2009-09-15
 
 * 2 major enhancements:
 
