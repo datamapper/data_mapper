@@ -8,6 +8,7 @@ Included gems are:
 *  dm-aggregates
 *  dm-constraints
 *  dm-migrations
+*  dm-transactions
 *  dm-serializer
 *  dm-timestamps
 *  dm-validations

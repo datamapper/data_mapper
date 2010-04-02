@@ -3,7 +3,17 @@ require 'pathname'
 require 'rubygems'
 require 'rake'
 
-gems = %w[ dm-core dm-aggregates dm-constraints dm-migrations dm-serializer dm-timestamps dm-validations dm-types ]
+gems = %w[
+  dm-core
+  dm-aggregates
+  dm-constraints
+  dm-migrations
+  dm-transactions
+  dm-serializer
+  dm-timestamps
+  dm-validations
+  dm-types
+]
 
 AUTHOR = 'Dan Kubb'
 EMAIL  = 'dan.kubb@gmail.com'
