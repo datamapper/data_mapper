@@ -13,6 +13,6 @@ DEPENDENCIES = %w[
 ]
 
 DEPENDENCIES.each do |lib|
-  gem lib, '0.10.2'
+  gem lib, '1.0.0.rc1'
   require lib
 end
