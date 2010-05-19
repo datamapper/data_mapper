@@ -39,6 +39,8 @@ end
 
 task(:spec) {}  # this gem does not provide any specs
 
+FileList['tasks/**/*.rake'].each { |task| import task }
+
 ## HOE TASKS
 
 require 'hoe'
