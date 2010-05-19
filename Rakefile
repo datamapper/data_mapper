@@ -37,6 +37,8 @@ task :install => :package do
   sh %{#{SUDO} gem install --local pkg/#{GEM_NAME}-#{GEM_VERSION}}
 end
 
+task(:spec) {}  # this gem does not provide any specs
+
 ## HOE TASKS
 
 require 'hoe'
