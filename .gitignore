@@ -33,3 +33,4 @@ Gemfile.local
 Gemfile.lock
 
 ## PROJECT::SPECIFIC
+lib/datamapper.rb
