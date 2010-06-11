@@ -1,4 +1,4 @@
-DEPENDENCIES = %w[
+%w[
   dm-core
   dm-aggregates
   dm-constraints
@@ -8,8 +8,6 @@ DEPENDENCIES = %w[
   dm-timestamps
   dm-validations
   dm-types
-]
-
-DEPENDENCIES.each do |lib|
+].each do |lib|
   require lib
 end
