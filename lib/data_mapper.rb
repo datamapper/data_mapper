@@ -1,5 +1,3 @@
-require 'rubygems'
-
 DEPENDENCIES = %w[
   dm-core
   dm-aggregates
@@ -13,6 +11,5 @@ DEPENDENCIES = %w[
 ]
 
 DEPENDENCIES.each do |lib|
-  gem lib, '1.0.0'
   require lib
 end
