@@ -1,6 +1,12 @@
-=== 1.0.0 / (pending)
+=== 1.0.1 / 2010-09-07
 
-* 1 minor enhancements:
+* 1 minor enhancement:
+
+  * Updated gem dependencies to 1.0.1
+
+=== 1.0.0 / 2010-06-08
+
+* 1 minor enhancement:
 
   * Updated gem dependencies to 1.0.0
   * Added dependency on dm-transactions since that has been extracted from dm-core
