@@ -21,7 +21,7 @@ GEM_NAME = 'data_mapper'
 GEM_VERSION = '1.0.1'
 GEM_DEPENDENCIES = gems.collect { |g| [ g, GEM_VERSION ] }
 GEM_CLEAN = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
-GEM_EXTRAS = { :has_rdoc => false }
+GEM_EXTRAS = { :has_rdoc => 'yard' }
 
 PROJECT_NAME = 'datamapper'
 PROJECT_URL  = 'http://datamapper.org'
