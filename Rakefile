@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require 'pathname'
 require 'rubygems'
 require 'rake'
@@ -15,19 +16,18 @@ gems = %w[
   dm-types
 ]
 
-AUTHOR = 'Dan Kubb'
-EMAIL  = 'dan.kubb@gmail.com'
-GEM_NAME = 'data_mapper'
-GEM_VERSION = '1.0.2'
-GEM_DEPENDENCIES = gems.collect { |g| [ g, GEM_VERSION ] }
-GEM_CLEAN = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
-GEM_EXTRAS = { :has_rdoc => 'yard' }
+AUTHOR           = 'Dan Kubb'
+EMAIL            = 'dan.kubb@gmail.com'
+GEM_NAME         = 'data_mapper'
+GEM_VERSION      = '1.0.2'
+GEM_DEPENDENCIES = gems.map { |gem_name| [ gem_name, "~> #{GEM_VERSION}" ] }
+GEM_CLEAN        = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
+GEM_EXTRAS       = { :has_rdoc => 'yard' }
 
-PROJECT_NAME = 'datamapper'
-PROJECT_URL  = 'http://datamapper.org'
+PROJECT_NAME        = 'datamapper'
+PROJECT_URL         = 'http://datamapper.org'
 PROJECT_DESCRIPTION = 'Faster, Better, Simpler.'
-PROJECT_SUMMARY = 'An Object/Relational Mapper for Ruby'
-
+PROJECT_SUMMARY     = 'An Object/Relational Mapper for Ruby'
 
 WINDOWS = (RUBY_PLATFORM =~ /win32|mingw|bccwin|cygwin/) rescue nil
 SUDO    = WINDOWS ? '' : ('sudo' unless ENV['SUDOLESS'])
