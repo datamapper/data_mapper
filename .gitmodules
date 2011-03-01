@@ -1,108 +1,27 @@
 [submodule "dm-core"]
 	path = dm-core
 	url = http://github.com/datamapper/dm-core.git
-[submodule "datamapper.github.com"]
-	path = datamapper.github.com
-	url = http://github.com/datamapper/datamapper.github.com.git
-[submodule "dm-rails"]
-	path = dm-rails
-	url = http://github.com/datamapper/dm-rails.git
-[submodule "dm-active_model"]
-	path = dm-active_model
-	url = http://github.com/datamapper/dm-active_model.git
-[submodule "dm-transactions"]
-	path = dm-transactions
-	url = http://github.com/datamapper/dm-transactions.git
-[submodule "dm-mysql-adapter"]
-	path = dm-mysql-adapter
-	url = http://github.com/datamapper/dm-mysql-adapter.git
-[submodule "dm-postgres-adapter"]
-	path = dm-postgres-adapter
-	url = http://github.com/datamapper/dm-postgres-adapter.git
-[submodule "dm-sqlite-adapter"]
-	path = dm-sqlite-adapter
-	url = http://github.com/datamapper/dm-sqlite-adapter.git
-[submodule "dm-oracle-adapter"]
-	path = dm-oracle-adapter
-	url = http://github.com/datamapper/dm-oracle-adapter.git
-[submodule "dm-sqlserver-adapter"]
-	path = dm-sqlserver-adapter
-	url = http://github.com/datamapper/dm-sqlserver-adapter.git
-[submodule "dm-do-adapter"]
-	path = dm-do-adapter
-	url = http://github.com/datamapper/dm-do-adapter.git
-[submodule "dm-yaml-adapter"]
-	path = dm-yaml-adapter
-	url = http://github.com/datamapper/dm-yaml-adapter.git
-[submodule "dm-adjust"]
-	path = dm-adjust
-	url = http://github.com/datamapper/dm-adjust.git
 [submodule "dm-aggregates"]
 	path = dm-aggregates
 	url = http://github.com/datamapper/dm-aggregates.git
-[submodule "dm-ar-finders"]
-	path = dm-ar-finders
-	url = http://github.com/datamapper/dm-ar-finders.git
-[submodule "dm-cli"]
-	path = dm-cli
-	url = http://github.com/datamapper/dm-cli.git
 [submodule "dm-constraints"]
 	path = dm-constraints
 	url = http://github.com/datamapper/dm-constraints.git
-[submodule "dm-is-list"]
-	path = dm-is-list
-	url = http://github.com/datamapper/dm-is-list.git
-[submodule "dm-is-nested_set"]
-	path = dm-is-nested_set
-	url = http://github.com/datamapper/dm-is-nested_set.git
-[submodule "dm-is-remixable"]
-	path = dm-is-remixable
-	url = http://github.com/datamapper/dm-is-remixable.git
-[submodule "dm-is-searchable"]
-	path = dm-is-searchable
-	url = http://github.com/datamapper/dm-is-searchable.git
-[submodule "dm-is-state_machine"]
-	path = dm-is-state_machine
-	url = http://github.com/datamapper/dm-is-state_machine.git
-[submodule "dm-is-tree"]
-	path = dm-is-tree
-	url = http://github.com/datamapper/dm-is-tree.git
-[submodule "dm-is-versioned"]
-	path = dm-is-versioned
-	url = http://github.com/datamapper/dm-is-versioned.git
 [submodule "dm-migrations"]
 	path = dm-migrations
 	url = http://github.com/datamapper/dm-migrations.git
-[submodule "dm-observer"]
-	path = dm-observer
-	url = http://github.com/datamapper/dm-observer.git
+[submodule "dm-transactions"]
+	path = dm-transactions
+	url = http://github.com/datamapper/dm-transactions.git
 [submodule "dm-serializer"]
 	path = dm-serializer
 	url = http://github.com/datamapper/dm-serializer.git
-[submodule "dm-sweatshop"]
-	path = dm-sweatshop
-	url = http://github.com/datamapper/dm-sweatshop.git
-[submodule "dm-tags"]
-	path = dm-tags
-	url = http://github.com/datamapper/dm-tags.git
-[submodule "dm-types"]
-	path = dm-types
-	url = http://github.com/datamapper/dm-types.git
+[submodule "dm-timestamps"]
+	path = dm-timestamps
+	url = http://github.com/datamapper/dm-timestamps.git
 [submodule "dm-validations"]
 	path = dm-validations
 	url = http://github.com/datamapper/dm-validations.git
-[submodule "dm-models"]
-	path = dm-models
-	url = http://github.com/datamapper/dm-models.git
-[submodule "dm-ferret-adapter"]
-	path = dm-ferret-adapter
-	url = http://github.com/datamapper/dm-ferret-adapter.git
-[submodule "dm-rest-adapter"]
-	path = dm-rest-adapter
-	url = http://github.com/datamapper/dm-rest-adapter.git
-[submodule "rails_datamapper"]
-	path = rails_datamapper
-	url = http://github.com/datamapper/rails_datamapper.git
-[submodule "dm-dev"]
-	path = dm-dev
-	url = http://github.com/datamapper/dm-dev.git
+[submodule "dm-types"]
+	path = dm-types
+	url = http://github.com/datamapper/dm-types.git
