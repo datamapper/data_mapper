@@ -1,3 +1,15 @@
+=== 1.1.0 / 2011-03-16
+
+* 1 minor enhancement:
+
+  * Updated gem dependencies to 1.1.0
+
+=== 1.0.2 / 2010-09-07
+
+* 1 minor enhancement:
+
+  * Updated gem dependencies to 1.0.2
+
 === 1.0.1 / 2010-09-07
 
 * 1 minor enhancement:
