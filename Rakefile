@@ -19,7 +19,7 @@ gems = %w[
 AUTHOR           = 'Dan Kubb'
 EMAIL            = 'dan.kubb@gmail.com'
 GEM_NAME         = 'data_mapper'
-GEM_VERSION      = '1.1.0.rc3'
+GEM_VERSION      = '1.1.0'
 GEM_DEPENDENCIES = gems.map { |gem_name| [ gem_name, "= #{GEM_VERSION}" ] }
 GEM_CLEAN        = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
 GEM_EXTRAS       = { :has_rdoc => 'yard' }
